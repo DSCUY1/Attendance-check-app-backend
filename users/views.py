@@ -146,6 +146,14 @@ class RoleViewSet(viewsets.ViewSet):
 #     queryset = User.objects.all()
 #     serializer_class = UsersSerializer
 
+<<<<<<< HEAD
+    def put(self, request, pk=None):
+        user = request.user
+        serializer = UsersSerializer(user, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+=======
 #     def get(self, request, pk=None):
 #         if pk:
 #             return Response({'data': self.retrieve(request, pk).data})
@@ -195,6 +203,7 @@ class UserViewSet(viewsets.ViewSet):
         return Response({
             "data": serializer.data
         })
+>>>>>>> b122a98b6b9052fabf4916e8c5a37a120e09193c
 
     def retrieve(self, request, pk=None):
         user = User.objects.get(id=pk)

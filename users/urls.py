@@ -14,6 +14,9 @@ urlpatterns = [
         'get': 'list',
         'post': 'create'
     })),
+    path('users/info', ProfileUseAPIView.as_view()),
+    path('users/password', ProfilePasswordAPIView.as_view()),
+
     path('roles', RoleViewSet.as_view({
         'get': 'list',
         'post': 'create',
@@ -22,6 +25,10 @@ urlpatterns = [
         'get': 'retrieve',
         'put': 'update',
         'delete': 'delete'
+<<<<<<< HEAD
+    }))
+   
+=======
     })),
     # path('users', UserGenericAPIVIEW.as_view()),
     # path('users/<str:pk>', UserGenericAPIVIEW.as_view())
@@ -34,4 +41,5 @@ urlpatterns = [
         'put': 'update',
         'delete': 'delete'
     }))
+>>>>>>> b122a98b6b9052fabf4916e8c5a37a120e09193c
 ]
